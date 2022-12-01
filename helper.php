@@ -9,7 +9,6 @@ if (isset($_POST['submit'])) {
     $folder = "uploads/";
     $target = $folder . basename($_FILES['img']['name']);
     move_uploaded_file($tempname, $target);
-
-    $insert = "INSERT INTO `aptech`(`Name`, `Email`, `Password`, `Img`) VALUES ('$name','$email','$pass','$target')";
+    $insert = "INSERT INTO `aptech`(`Name`, `Email`, `Pass`, `Img`) VALUES ('$name','$email','$pass','$target')";
     $result = mysqli_query($conn, $insert);
 }

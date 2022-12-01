@@ -36,7 +36,6 @@ include "conn.php";
                                 <p id="g"></p>
                                 <p></p>
                             </div>
-
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email" />
@@ -46,7 +45,7 @@ include "conn.php";
                                 <input type="password" name="pass" id="pass" placeholder="Password" />
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <label for="img"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="file" name="img" id="img" />
                             </div>
                             <div class="form-grou p form-button">

@@ -10,7 +10,7 @@ echo "<th scope='col'>Id</th>";
 echo "<th scope='col'>Name</th>";
 echo "<th scope='col'>Email</th>";
 echo "<th scope='col'>Password</th>";
-echo "<th scope='col'></th>";
+echo "<th scope='col'>Image</th>";
 echo '</tr>';
 echo '</thead>';
 echo '<tbody>';

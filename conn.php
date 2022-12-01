@@ -5,5 +5,3 @@ try {
     echo $ex . 'This is error';
     die('Connection failed');
 }
-
-?>

@@ -214,6 +214,10 @@ img {
   height: auto;
 }
 
+.profile_img {
+  width: 100%;
+}
+
 figure {
   margin: 0;
 }
