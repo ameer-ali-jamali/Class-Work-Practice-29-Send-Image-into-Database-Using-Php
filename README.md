@@ -1,2 +1,2 @@
-# Send form data into database
-I created one registration form with 100% working and no issues in my coding
+# Send Data with Image into database
+In this form i learned how to send image into database and server ...
