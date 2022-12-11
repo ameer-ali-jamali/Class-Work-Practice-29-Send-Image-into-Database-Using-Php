@@ -1,11 +1,11 @@
 <?php
 include_once "conn.php";
 
-// Signup Function With Image ...
 function signup($name, $email, $pass, $img)
 {
     global $conn;
-    if ($name && $email && $pass && $img != "") {
+    if ($name && $email && $pass && $img == true) {
+        $target = $_FILES['img']['tmp_name'];
         $folder = "uploads/";
         $target = $folder . basename($_FILES['img']['name']);
         move_uploaded_file($img, $target);
@@ -15,40 +15,30 @@ function signup($name, $email, $pass, $img)
         } catch (Exception $ex) {
             if ($ex) {
                 return die("<script>
-                alert('This Email Already Exists Please Try Other Email');
-                window.location = 'index.php';
-                </script>");
+                         alert('This Email Already Exists Please Try Other Email');
+                         window.location = 'index.php';
+                         </script>");
             }
         }
         return $result;
     } else {
         return die("<script>
-    alert('Please Fill Complete Registartion Form');
-    window.location = 'index.php';
-    </script>");
+             alert('Please Fill Complete Registartion Form');
+             window.location = 'index.php';
+             </script>");
     }
 }
-
 if (isset($_POST['submit'])) {
-    $registration = signup(
-        $_POST['name'],
-        $_POST['email'],
-        $_POST['pass'],
-        $_FILES['img']['tmp_name']
-    );
+    $registration = signup($_POST['name'], $_POST['email'], $_POST['pass'], $_FILES['img']['tmp_name']);
     if ($registration == true) {
         die("<script>
-            alert('Your Data Submited Successfully');
-            window.location = 'index.php';
-            </script>");
+                     alert('Your Data Submited Successfully');
+                     window.location = 'index.php';
+                     </script>");
     } else {
         die("<script>
-            alert('Please Fill Registration Form');
-            window.location = 'index.php';
-            </script>");
+                     alert('Query Error');
+                     window.location = 'index.php';
+                     </script>");
     }
 }
-
-?>
-<?php
-?>

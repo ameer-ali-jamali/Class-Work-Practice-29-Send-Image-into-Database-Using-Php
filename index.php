@@ -50,9 +50,8 @@ include "conn.php";
                             </div>
                             <div class="form-grou p form-button">
                                 <div class="d-grid">
-                                    <!-- <a type="submit" name="" id="" onclick="signup()" class="btn btn-primary">Submit</a> -->
-                                    <input type="submit" name="submit" id="signup">
-
+                                    <a type="submit" onclick="signup()" class="btn btn-primary">Submit</a>
+                                    <input type="submit" hidden name="submit" id="signup">
                                 </div>
                             </div>
                         </form>
